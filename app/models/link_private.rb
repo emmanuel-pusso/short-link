@@ -1,0 +1,2 @@
+class LinkPrivate < Link
+end

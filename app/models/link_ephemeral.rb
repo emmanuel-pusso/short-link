@@ -1,0 +1,3 @@
+class LinkEphemeral < Link
+    
+end

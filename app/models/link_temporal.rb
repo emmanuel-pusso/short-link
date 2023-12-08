@@ -1,0 +1,2 @@
+class LinkTemporal < Link
+end
