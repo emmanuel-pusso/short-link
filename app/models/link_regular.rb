@@ -1,2 +1,2 @@
-class LinkTemporal < Link
+class LinkRegular < Link
 end
