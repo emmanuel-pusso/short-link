@@ -6,6 +6,9 @@ class CreateLinks < ActiveRecord::Migration[7.1]
       t.string :slug, index: true
       t.string :url
       t.string :type
+      t.datetime :expiration_date_time
+      t.boolean :visited :default =>  false
+      t.string :password_link_access
 
       t.timestamps
     end

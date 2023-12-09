@@ -111,6 +111,7 @@ GEM
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.6.0)
+    ipaddress (0.8.3)
     irb (1.10.1)
       rdoc
       reline (>= 0.3.8)
@@ -244,6 +245,7 @@ DEPENDENCIES
   capybara
   debug
   importmap-rails
+  ipaddress
   jbuilder
   puma (>= 5.0)
   rails (~> 7.1.2)
