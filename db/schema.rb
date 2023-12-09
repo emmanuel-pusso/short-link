@@ -10,20 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_09_035525) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_09_062338) do
   create_table "links", force: :cascade do |t|
-    t.integer "user_id"
     t.string "name"
     t.string "slug"
+    t.string "large_url"
     t.string "type"
-    t.datetime "expiration_date_time"
-    t.boolean "visited", default: false
+    t.datetime "expires_at"
+    t.boolean "visited"
     t.string "password_link_access"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "base_url"
-    t.index ["slug"], name: "index_links_on_slug"
-    t.index ["user_id"], name: "index_links_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,6 +41,5 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_09_035525) do
     t.index ["link_id"], name: "index_visits_on_link_id"
   end
 
-  add_foreign_key "links", "users"
   add_foreign_key "visits", "links"
 end

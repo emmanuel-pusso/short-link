@@ -14,10 +14,13 @@ class LinksTest < ApplicationSystemTestCase
     visit links_url
     click_on "New link"
 
-    fill_in "Url", with: @link.URL
+    fill_in "Expires at", with: @link.expires_at
+    fill_in "Large url", with: @link.large_url
     fill_in "Name", with: @link.name
+    fill_in "Password link access", with: @link.password_link_access
     fill_in "Slug", with: @link.slug
     fill_in "Type", with: @link.type
+    check "Visited" if @link.visited
     click_on "Create Link"
 
     assert_text "Link was successfully created"
@@ -28,10 +31,13 @@ class LinksTest < ApplicationSystemTestCase
     visit link_url(@link)
     click_on "Edit this link", match: :first
 
-    fill_in "Url", with: @link.URL
+    fill_in "Expires at", with: @link.expires_at
+    fill_in "Large url", with: @link.large_url
     fill_in "Name", with: @link.name
+    fill_in "Password link access", with: @link.password_link_access
     fill_in "Slug", with: @link.slug
     fill_in "Type", with: @link.type
+    check "Visited" if @link.visited
     click_on "Update Link"
 
     assert_text "Link was successfully updated"

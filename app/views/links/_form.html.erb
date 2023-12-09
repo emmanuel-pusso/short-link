@@ -22,13 +22,28 @@
   </div>
 
   <div>
-    <%= form.label :URL, style: "display: block" %>
-    <%= form.text_field :URL %>
+    <%= form.label :large_url, style: "display: block" %>
+    <%= form.text_field :large_url %>
   </div>
 
   <div>
     <%= form.label :type, style: "display: block" %>
     <%= form.text_field :type %>
+  </div>
+
+  <div>
+    <%= form.label :expires_at, style: "display: block" %>
+    <%= form.datetime_field :expires_at %>
+  </div>
+
+  <div>
+    <%= form.label :visited, style: "display: block" %>
+    <%= form.check_box :visited %>
+  </div>
+
+  <div>
+    <%= form.label :password_link_access, style: "display: block" %>
+    <%= form.text_field :password_link_access %>
   </div>
 
   <div>

@@ -3,11 +3,17 @@
 one:
   name: MyString
   slug: MyString
-  URL: MyString
+  large_url: MyString
   type: 
+  expires_at: 2023-12-09 03:23:38
+  visited: false
+  password_link_access: MyString
 
 two:
   name: MyString
   slug: MyString
-  URL: MyString
+  large_url: MyString
   type: 
+  expires_at: 2023-12-09 03:23:38
+  visited: false
+  password_link_access: MyString
